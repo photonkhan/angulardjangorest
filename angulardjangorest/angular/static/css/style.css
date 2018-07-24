@@ -1,0 +1,62 @@
+.box-shadow-1 {
+  box-shadow: 0px 1px 1px 0px grey; }
+  .box-shadow-1:hover {
+    box-shadow: 0px 2px 2px 0px grey; }
+
+.text-shadow-1 {
+  text-shadow: 1px 1px 5 grey; }
+  .text-shadow-1:hover {
+    text-shadow: 0px 0px 0 grey; }
+
+.box-shadow-2 {
+  box-shadow: 0px 2px 2px 0px grey; }
+  .box-shadow-2:hover {
+    box-shadow: 0px 4px 4px 0px grey; }
+
+.text-shadow-2 {
+  text-shadow: 2px 2px 10 grey; }
+  .text-shadow-2:hover {
+    text-shadow: 0px 0px 0 grey; }
+
+.box-shadow-3 {
+  box-shadow: 0px 3px 3px 0px grey; }
+  .box-shadow-3:hover {
+    box-shadow: 0px 6px 6px 0px grey; }
+
+.text-shadow-3 {
+  text-shadow: 3px 3px 15 grey; }
+  .text-shadow-3:hover {
+    text-shadow: 0px 0px 0 grey; }
+
+.box-shadow-4 {
+  box-shadow: 0px 4px 4px 0px grey; }
+  .box-shadow-4:hover {
+    box-shadow: 0px 8px 8px 0px grey; }
+
+.text-shadow-4 {
+  text-shadow: 4px 4px 20 grey; }
+  .text-shadow-4:hover {
+    text-shadow: 0px 0px 0 grey; }
+
+.box-shadow-5 {
+  box-shadow: 0px 5px 5px 0px grey; }
+  .box-shadow-5:hover {
+    box-shadow: 0px 10px 10px 0px grey; }
+
+.text-shadow-5 {
+  text-shadow: 5px 5px 25 grey; }
+  .text-shadow-5:hover {
+    text-shadow: 0px 0px 0 grey; }
+
+body, html {
+  padding: 0px;
+  margin: 0px;
+  height: 100%; }
+
+.nounderline {
+  text-decoration: none; }
+
+.cursor {
+  cursor: pointer; }
+
+/*# sourceMappingURL=style.css.map */

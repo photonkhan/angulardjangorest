@@ -7,23 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% load static %}
     {# Loading the Required CSS Files #}
+    <link rel = 'shortcute icon' href = "{% static 'favicon.ico' %}"/>
     <link rel = 'stylesheet'  href = "{% static 'bootstrap/dist/css/bootstrap.min.css' %}"/>
     <link rel = 'stylesheet'  href = "{% static 'css/style.css' %}"/>
     {# Loading the Required JS Files #}
-    <script src = "{% static 'jquery/jquery.min.js' %}"/>
-    <script src = "{% static 'popper/dist/umd/popper.min.js' %}"/>
-    <script src = "{% static 'bootstrap/dist/js/bootstrap.min.js' %}"/>
+    <script src = "{% static 'jquery/jquery.min.js' %}"></script>
+    <script src = "{% static 'popper/dist/umd/popper.min.js' %}"></script>
+    <script src = "{% static 'bootstrap/dist/js/bootstrap.min.js' %}"></script>
     <script src = "{% static 'angular/angular.min.js' %}"></script>
-    <script src = "{% static 'angular-ui-router/angular-ui-router.min.js' %}"></script>
+    <script src = "{% static 'angular-ui-router/release/angular-ui-router.min.js' %}"></script>
     <script src = "{% static 'js/main.js' %}"></script>
 </head>
 <body ng-app = 'myApp'>
-    <div class = 'container'>
-        <div class = 'row'>
-            <div class = 'col'>
+    <div class = 'container border mt-1 box-shadow-1'>
+        <div class = 'row m-5'>
+            <div class = 'col text-center'>
                 <h1 class = 'lead'>{{header}}</h1>
             </div>
         </div>
     </div>
+    {% include 'angular/navigation.html' %}
+    {% block body %}
+    {% endblock %}
+    <ui-view></ui-view>
+    {% include 'angular/footer.html' %}
 </body>
 </html>

@@ -1,0 +1,37 @@
+@mixin box-shadow($h-offset, $v-offset, $blur, $spread, $color){
+    box-shadow: #{$h-offset}px #{$v-offset}px #{$blur}px #{$spread}px $color;
+}
+
+@mixin text-shadow($h-shadow, $v-shadow, $spread, $color){
+    text-shadow: #{$h-shadow}px #{$v-shadow}px $spread $color;
+}
+
+@for $i from 1 through 5{
+    .box-shadow-#{$i}{
+        @include box-shadow(0, $i, $i, 0, grey);
+        &:hover{
+            @include box-shadow(0, $i*2, $i*2, 0, grey);
+        }
+    }
+
+    .text-shadow-#{$i}{
+        @include text-shadow($i, $i, $i*5, grey);
+        &:hover{
+            @include text-shadow(0, 0, 0, grey);
+        }
+    }
+}
+
+body, html{
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+}
+
+.nounderline{
+    text-decoration: none;
+}
+
+.cursor{
+    cursor: pointer;
+}
