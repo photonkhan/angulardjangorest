@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Angular Django Rest Implementation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    {# Loading the Required CSS Files #}
+    <link rel = 'stylesheet'  href = "{% static 'bootstrap/dist/css/bootstrap.min.css' %}"/>
+    <link rel = 'stylesheet'  href = "{% static 'css/style.css' %}"/>
+    {# Loading the Required JS Files #}
+    <script src = "{% static 'jquery/jquery.min.js' %}"/>
+    <script src = "{% static 'popper/dist/umd/popper.min.js' %}"/>
+    <script src = "{% static 'bootstrap/dist/js/bootstrap.min.js' %}"/>
+    <script src = "{% static 'angular/angular.min.js' %}"></script>
+    <script src = "{% static 'angular-ui-router/angular-ui-router.min.js' %}"></script>
+    <script src = "{% static 'js/main.js' %}"></script>
+</head>
+<body ng-app = 'myApp'>
+    <div class = 'container'>
+        <div class = 'row'>
+            <div class = 'col'>
+                <h1 class = 'lead'>{{header}}</h1>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
