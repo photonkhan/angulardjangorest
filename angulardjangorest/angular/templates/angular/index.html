@@ -1,10 +1,17 @@
 {% extends 'angular/layout.html' %}
 
 {% block body %}
-<div class = 'container'>
+<div class = 'container mt-5 ml-5 mr-5 mb-0 pt-5 pl-5 pr-5 pb-0'>
     <div class = 'row'>
         <div class = 'col'>
-            
+            <div class = 'mb-3'>
+                <a ui-sref = 'home' class = 'nounderline'>Home</a>
+                <p>Please, go to home to fill up the data</p>
+            </div>
+            <div class = 'mb-3'>
+                <a ui-sref = 'information' class = 'nounderline'>Information</a>
+                <p>Please, go to information to receive the data</p>
+            </div>
         </div>
     </div>
 </div>
