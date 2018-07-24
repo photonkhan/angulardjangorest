@@ -13,6 +13,14 @@ app.config(function($stateProvider){
         controller: 'informationCtrl'
     };
 
+    var directState = {
+        name: 'direct',
+        url: '/direct',
+        templateUrl: '/static/html/direct.html',
+        controller: 'directCtrl'
+    };
+
     $stateProvider.state(homeState);
     $stateProvider.state(informationState);
+    $stateProvider.state(directState);
 });
