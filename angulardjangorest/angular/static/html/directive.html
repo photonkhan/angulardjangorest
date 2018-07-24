@@ -1,0 +1,22 @@
+<div class = 'container' ng-controller = 'directCtrl'>
+    <div class = 'row'>
+        <div class = 'col'>
+            <form name = 'directForm'>
+                <div class = 'input-group'>
+                    <div class = 'input-group-prepend'>
+                        <span class = 'input-group-text'>
+                            <i class = 'fa fa-money'></i>
+                        </span>
+                    </div>
+                    <input type = 'text' ng-model = 'money' name = 'money' class = 'form-control' ng-keypress = 'pressedKey()' ng-pattern = '/[0-9\.]+/'/>
+                    <div class = 'input-group-prepend'>
+                        <span class = 'input-group-text'>
+                            <i class = 'text-success fa fa-check' ng-show = 'directForm.money.$touched && directForm.money.$valid'></i>
+                            <i class = 'text-danger fa fa-remove' ng-show = 'directForm.money.$touched && directForm.money.$invalid'></i>
+                        </span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
