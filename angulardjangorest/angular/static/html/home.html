@@ -1,4 +1,4 @@
-<div class = 'container-fluid'>
+<div class = 'container-fluid' ng-controller = 'homeCtrl'>
     <div class = 'row'>
         <div class = 'col p-5 m-5'>
             <div class = 'text-center mb-3'>
@@ -16,25 +16,71 @@
                             <i class = 'fa fa-user'></i>
                         </span>
                     </div>
-                    <input class = 'form-control' ng-model = 'name_1' name = 'name_1'/>
+                    <input type = 'text' class = 'form-control' ng-model = 'user.name_1' name = 'name_1' ng-pattern = '/[A-Za-z]+/' required/>
+                    <div class = 'input-group-prepend'>
+                        <span class = 'input-group-text'>
+                            <span ng-show = 'homeForm.name_1.$touched && homeForm.name_1.$valid' class = 'text-success'>
+                                <i class = 'fa fa-check'></i>
+                            </span>
+                            <span ng-show = 'homeForm.name_1.$touched && homeForm.name_1.$invalid' class = 'text-danger'>
+                                <i class = 'fa fa-remove'></i>
+                            </span>
+                        </span>
+                    </div>
                 </div>
+                <p>
+                    <span class = 'text-danger' ng-show = "homeForm.name_1.$touched && homeForm.name_1.$invalid">
+                        Invalid Name Field
+                    </span>
+                </p>
                 <div class = 'input-group'>
                     <div class = 'input-group-prepend'>
                         <span class = 'input-group-text'>
                             <i class = 'fa fa-user'></i>
                         </span>
                     </div>
-                    <input class = 'form-control' ng-model = 'name_2' name = 'name_2'/>
+                    <input type = 'text' class = 'form-control' ng-model = 'user.name_2' name = 'name_2' ng-pattern = '/[A-Za-z]+/' required/>
+                    <div class = 'input-group-prepend'>
+                        <span class = 'input-group-text'>
+                            <span ng-show = 'homeForm.name_2.$touched && homeForm.name_2.$valid' class = 'text-success'>
+                                <i class = 'fa fa-check'></i>
+                            </span>
+                            <span ng-show = 'homeForm.name_2.$touched && homeForm.name_2.$invalid' class = 'text-danger'>
+                                <i class = 'fa fa-remove'></i>
+                            </span>
+                        </span>
+                    </div>
                 </div>
+                <p>
+                    <span class = 'text-danger' ng-show = 'homeForm.name_2.$touched && homeForm.name_2.$invalid'>
+                        Invalid Name Field
+                    </span>
+                </p>
                 <div class = 'input-group'>
                     <div class = 'input-group-prepend'>
                         <span class = 'input-group-text'>
                             <i class = 'fa fa-user'></i>
                         </span>
                     </div>
-                    <input class = 'form-control' ng-model = 'name_3' name = 'name_3'/>
+                    <input type = 'text' class = 'form-control' ng-model = 'user.name_3' name = 'name_3' ng-pattern = '/[A-Za-z]+/' required/>
+                    <div class = 'input-group-prepend'>
+                        <span class = 'input-group-text'>
+                            <span ng-show = 'homeForm.name_2.$touched && homeForm.name_2.$valid' class = 'text-success'>
+                                    <i class = 'fa fa-check'></i>
+                                </span>
+                                <span ng-show = 'homeForm.name_2.$touched && homeForm.name_2.$invalid' class = 'text-danger'>
+                                    <i class = 'fa fa-remove'></i>
+                                </span>
+                            </span>
+                        </span>
+                    </div>
                 </div>
-                <input type = 'submit' value = 'send'/>
+                <p>
+                    <span class = 'text-danger' ng-show = 'homeForm.name_3.$touched && homeForm.name_3.$invalid'>
+                        Invalid Name Field
+                    </span>
+                </p>
+                <input type = 'submit' value = 'Send' class = 'form-control btn btn-success'/>
             </form>
         </div>
     </div>

@@ -1,7 +1,23 @@
+<div class = 'container-fluid' ng-controller = 'informationCtrl'>
+    <div class = 'row m-5 p-5'>
+        <div class = 'col text-center'>
+            <p class = 'lead'>Receiving the Data</p>
+        </div>
+    </div>
+</div>
 <div class = 'container-fluid'>
-    <div class = 'row'>
-        <div class = 'col'>
-            Information
+    <div class = 'row m-5 p-5'>
+        <div class = 'col text-center'>
+            <div class = 'card mb-3 box-shadow-1' ng-repeat = "r in receivedData | orderBy: 'name'">
+                <div class = 'card-header'>
+                    <code>ID:: {{r.id}} </code>
+                </div>
+                <div class = 'card-body'>
+                    <span class = 'text-success'>
+                        Name:: {{r.name}}
+                    </span>
+                </div>
+            </div>
         </div>
     </div>
 </div>

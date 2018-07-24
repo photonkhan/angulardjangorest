@@ -19,12 +19,39 @@ app.config(function($stateProvider){
     $stateProvider.state(informationState);
 });
 
-app.controller('homeCtrl', function($scope, $http){
-    $scope.sendData = function(){
-        
+app.service('sharedService', function(){
+    this.names = [];
+    this.setNames = function(list_of_names){
+        this.names = list_of_names;
+    }
+    this.getNames = function(){
+        return this.names;
     }
 });
 
-app.controller('informationCtrl', function($scope, $http){
+app.controller('homeCtrl', function($scope, sharedService, $location){
+    $scope.user = {};
+    $scope.sendData = function(){
+       $scope.data = [
+                {
+                    id : 1,
+                    name: $scope.user.name_1
+                },
+                {
+                    id : 2,
+                    name: $scope.user.name_2
+                },
+                {
+                    id : 3,
+                    name: $scope.user.name_3
+                }
+        ];
+        sharedService.setNames($scope.data);
+        $location.path('/information');
+    };
 
+});
+
+app.controller('informationCtrl', function($scope, sharedService){
+    $scope.receivedData = sharedService.getNames();
 });
