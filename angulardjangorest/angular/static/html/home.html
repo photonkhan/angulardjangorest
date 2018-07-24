@@ -1,7 +1,41 @@
-<div class = 'container' ng-controller = 'homeController'>
+<div class = 'container-fluid'>
     <div class = 'row'>
-        <div class = 'col'>
-            Home
+        <div class = 'col p-5 m-5'>
+            <div class = 'text-center mb-3'>
+                <p class = 'lead'>
+                    <strong>
+                        Sending Data Form
+                    </strong>
+                </p>
+                <code>Pass all the data from here</code>
+            </div>
+            <form name = 'homeForm' class = 'box-shadow-1 p-5 border' ng-submit = 'sendData()'>
+                <div class = 'input-group'>
+                    <div class = 'input-group-prepend'>
+                        <span class = 'input-group-text'>
+                            <i class = 'fa fa-user'></i>
+                        </span>
+                    </div>
+                    <input class = 'form-control' ng-model = 'name_1' name = 'name_1'/>
+                </div>
+                <div class = 'input-group'>
+                    <div class = 'input-group-prepend'>
+                        <span class = 'input-group-text'>
+                            <i class = 'fa fa-user'></i>
+                        </span>
+                    </div>
+                    <input class = 'form-control' ng-model = 'name_2' name = 'name_2'/>
+                </div>
+                <div class = 'input-group'>
+                    <div class = 'input-group-prepend'>
+                        <span class = 'input-group-text'>
+                            <i class = 'fa fa-user'></i>
+                        </span>
+                    </div>
+                    <input class = 'form-control' ng-model = 'name_3' name = 'name_3'/>
+                </div>
+                <input type = 'submit' value = 'send'/>
+            </form>
         </div>
     </div>
 </div>
