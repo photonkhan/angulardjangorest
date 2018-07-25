@@ -22,14 +22,20 @@ app.controller('djangorestCtrl', function($http, $scope){
             email: $scope.updateSelectedContact.email,
             address: $scope.updateSelectedContact.address
         }
-    }
+    };
+    
     $scope.updateContact = function(){
-        console.log($scope.ucontact);
-    }
+        $http.put(url, $scope.ucontact, function(response){
+            $console.log("Deleted Successfully");
+        });
+    };
     
     $scope.deleteSelectedContact = {};
     $scope.deleteContact = function(){
-        console.log($scope.deleteSelectedContact);
-    }
+        var delete_url = url + "/" + $scope.deleteSelectedContact.id;
+        $http.delete(delete_url, function(){
+            $console.log("Deleted Successfully");
+        });
+    };
     
 });
