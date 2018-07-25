@@ -25,8 +25,15 @@ app.controller('djangorestCtrl', function($http, $scope){
     };
     
     $scope.updateContact = function(){
-        $http.put(url, $scope.ucontact, function(response){
-            $console.log("Deleted Successfully");
+        var update_url = url + "/" + $scope.ucontact.id + "/";
+        var update_data = {
+            id: $scope.ucontact.id,
+            name: $scope.ucontact.fullname,
+            email: $scope.ucontact.email,
+            address: $scope.ucontact.address
+        }
+        $http.put(update_url, update_data , function(response){
+            $console.log("Updated Successfully");
         });
     };
     
