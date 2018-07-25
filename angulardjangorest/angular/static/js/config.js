@@ -20,7 +20,15 @@ app.config(function($stateProvider){
         controller: 'directCtrl'
     };
 
+    var djangorestState = {
+        name: 'djangorest',
+        url: '/djangorest',
+        templateUrl: '/static/html/djangorest.html',
+        controller: 'djangorestCtrl'
+    };
+
     $stateProvider.state(homeState);
     $stateProvider.state(informationState);
     $stateProvider.state(directState);
+    $stateProvider.state(djangorestState);
 });

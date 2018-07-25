@@ -4,4 +4,4 @@ from rest_framework import serializers
 class ContactSerializer(serializers.HyperlinkedModelSerializer):
     class Meta: 
         model = Contact
-        fields = ('name', 'email', 'address')
+        fields = ('id', 'name', 'email', 'address')
