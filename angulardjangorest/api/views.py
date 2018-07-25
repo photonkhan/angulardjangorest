@@ -3,10 +3,11 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 
-# Create your views here.
-def index(request):
-    context = {
-        'header' : 'Angular with Djano Rest API'
-    }
-    return render(request, 'api/index.html', context)
+from api.models import Contact
+from rest_framework import viewsets
+from api.serializers import ContactSerializer
 
+
+class ContactViewSet(viewsets.ModelViewSet):
+    queryset = Contact.objects.all().order_by('name')
+    serializer_class = ContactSerializer
